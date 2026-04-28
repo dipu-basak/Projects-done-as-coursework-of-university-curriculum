@@ -4,11 +4,10 @@ int main() {
     char operator;
     float num1, num2, result;
 
-    printf("--- C Calculator ---\n");
     printf("Enter an operator (+, -, *, /): ");
     scanf(" %c", &operator);
 
-    printf("Enter two operands: ");
+    printf("Enter two numbers: ");
     scanf("%f %f", &num1, &num2);
 
     switch (operator) {
