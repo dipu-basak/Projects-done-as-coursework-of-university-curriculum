@@ -2,17 +2,17 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * OnPanicApp - A productivity tool for students.
+ * OnPanic - A productivity tool for students.
  * For focus and panic managOnement
  */
-public class OnPanicApp extends JFrame {
+public class OnPanic extends JFrame {
     private JLabel timerLabel;
     private Timer timer;
     private int remainingSeconds = 25 * 60; // Default to 25 minutes
     private JPanel todoListPanel;
     private JTextField taskInput;
 
-    public OnPanicApp() {
+    public OnPanic() {
         setupUI();
     }
 
@@ -96,7 +96,13 @@ public class OnPanicApp extends JFrame {
         todoPanel.add(scrollPane, BorderLayout.CENTER);
 
         add(todoPanel, BorderLayout.CENTER);
-
+        // 3. About Button Panel
+        JPanel aboutPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        aboutPanel.setBackground(new Color(224, 229, 236));
+        JButton aboutBtn = createStyledButton("About");
+        aboutBtn.addActionListener(e -> showAbout());
+        aboutPanel.add(aboutBtn);
+        add(aboutPanel, BorderLayout.SOUTH);
         // default 25 minutes 
         setTimer(25 * 60);
     }
@@ -125,8 +131,8 @@ public class OnPanicApp extends JFrame {
             if (remainingSeconds <= 0) {
                 timer.stop();
                 JOptionPane.showMessageDialog(this,
-                        "Time's up! Take a deep breath.",
-                        "Pomodoro Alert",
+                        "Time's up!",
+                        "You did it!!",
                         JOptionPane.INFORMATION_MESSAGE);
             }
         });
@@ -155,11 +161,19 @@ public class OnPanicApp extends JFrame {
         }
     }
 
+    // Method to show About dialog
+    private void showAbout() {
+        JOptionPane.showMessageDialog(this,
+                "Developed by:\nDipu Basak\nId: 20242079010",
+                "About OnPanic",
+                JOptionPane.INFORMATION_MESSAGE);
+    }
+
     public static void main(String[] args) {
         // Enable Antialiasing for smoother fonts
-        System.setProperty("awt.useSystemAAFontSettings","on");
-        System.setProperty("swing.aatext", "true");
+        // System.setProperty("awt.useSystemAAFontSettings","on");
+        // System.setProperty("swing.aatext", "true");
 
-        SwingUtilities.invokeLater(() -> new OnPanicApp().setVisible(true));
+        SwingUtilities.invokeLater(() -> new OnPanic().setVisible(true));
     }
 }
