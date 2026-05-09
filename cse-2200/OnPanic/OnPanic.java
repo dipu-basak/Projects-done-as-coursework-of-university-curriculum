@@ -39,7 +39,7 @@ public class OnPanic extends JFrame {
         JPanel modePanel = new JPanel(new FlowLayout());
         modePanel.setBackground(new Color(224, 229, 236));
         JButton btn25 = createStyledButton("25m Focus");
-        JButton btn50 = createStyledButton("50m Deep Work");
+        JButton btn50 = createStyledButton("50m Deep Focus");
         JButton btn5 = createStyledButton("5m Break");
 
         // Action Listeners for mode switching
