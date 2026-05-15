@@ -45,7 +45,7 @@ public class OnPanic extends JFrame {
         // Action Listeners for mode switching
         btn25.addActionListener(e -> setTimer(25 * 60));
         btn50.addActionListener(e -> setTimer(50 * 60));
-        btn5.addActionListener(e -> setTimer(5 * 1));
+        btn5.addActionListener(e -> setTimer(5 * 60));
 
         modePanel.add(btn25);
         modePanel.add(btn50);
