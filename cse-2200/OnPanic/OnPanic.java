@@ -18,7 +18,7 @@ public class OnPanic extends JFrame {
 
     private void setupUI() {
         // Basic window setup
-        setTitle("onPanic - Study Friend (Offline Mode)");
+        setTitle("OnPanic");
         setSize(500, 700);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -164,7 +164,7 @@ public class OnPanic extends JFrame {
     // Method to show About dialog
     private void showAbout() {
         JOptionPane.showMessageDialog(this,
-                "Developed by:\nDipu Basak\nId: 20242079010",
+                "Developed by:\nMd Jannatun Naim\nID: 20242157010\nDipu Basak\nId: 20242079010",
                 "About OnPanic",
                 JOptionPane.INFORMATION_MESSAGE);
     }
@@ -174,6 +174,6 @@ public class OnPanic extends JFrame {
         // System.setProperty("awt.useSystemAAFontSettings","on");
         // System.setProperty("swing.aatext", "true");
 
-        SwingUtilities.invokeLater(() -> new OnPanic().setVisible(true));
+        new OnPanic().setVisible(true);
     }
 }
