@@ -1,8 +1,12 @@
+from random import randint
 
-arr = [3, 5, 2, 9]
+n = int(input("n= "))
+arr = []
+for _ in range(n):
+    arr.append(randint(1, 100))
 print("Unsorted list =", arr)
 
-n = len(arr)
+# n = len(arr)
 
 for i in range(1, n): 
     key = arr[i]
